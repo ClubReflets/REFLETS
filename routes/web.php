@@ -19,5 +19,5 @@ Route::get('/gallery', 'HomeController@gallery');
 
 // Admin
 Route::resource('admin/organization', 'OrganizationController')->except([
-    'create', 'destroy'
+    'create', 'destroy', 'show'
 ]);
