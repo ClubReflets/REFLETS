@@ -25,3 +25,9 @@ services:
     restart: always
     volumes:
       - ./data/redis:/data
+
+  maildev:
+    image: djfarrelly/maildev
+    ports:
+      - 1080:80
+      - 1025:25
