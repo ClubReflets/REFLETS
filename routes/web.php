@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Home
+Route::get('/', 'HomeController@index');
+Route::get('/about', 'HomeController@about');
+Route::get('/contact', 'HomeController@contact');
+Route::get('/gallery', 'HomeController@gallery');
+
+// Admin
+Route::resource('admin/organization', 'OrganizationController')->except([
+    'create', 'destroy'
+]);
