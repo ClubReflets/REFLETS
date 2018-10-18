@@ -40,39 +40,43 @@
                                 </ul>
                             </div>
                         </li>
+                        <li>
+                            <a class="uk-navbar-toggle"
+                               data-uk-toggle data-uk-navbar-toggle-icon
+                               href="#offcanvas-nav">
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
+    <!-- OFFCANVAS -->
+    <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
+        <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
+            <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+            @include('components.admin.sidebar_links')
+        </div>
+    </div>
+    <!-- /OFFCANVAS -->
     <!-- Sidebar -->
     <aside class="sidebar uk-light uk-visible@m">
         <header class="logo uk-flex uk-flex-middle">
             <a href="{{ route('admin') }}" class="uk-text-lead">Logo</a>
         </header>
         <section class="links">
-            <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
-                <li class="uk-nav-header">Gestion</li>
-                <li>
-                    <a href="{{ route('admin') }}">
-                        <span data-uk-icon="icon: home" class="uk-margin-small-right uk-icon"></span>
-                        Accueil
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('organization.index') }}">
-                        <span data-uk-icon="icon: social" class="uk-margin-small-right uk-icon"></span>
-                        Organisation
-                    </a>
-                </li>
+            @include('components/admin/sidebar_links')
+        </section>
+        <footer>
+            <ul class="uk-nav uk-nav-default" data-uk-nav>
                 <li>
                     <a href="#">
-                        <span data-uk-icon="icon:  image" class="uk-margin-small-right uk-icon"></span>
-                        Galerie
+                        <span data-uk-icon="icon: sign-out"></span>
+                        Se déconnecter
                     </a>
                 </li>
             </ul>
-        </section>
+        </footer>
     </aside>
     <!-- Content -->
     <main>
