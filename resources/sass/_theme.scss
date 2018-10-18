@@ -1,0 +1,16 @@
+// Override Uikit styling
+
+.uk-navbar-dropdown {
+    margin-top: 0;
+}
+
+.uk-nav-header {
+    padding: 15px;
+    margin-top: 10px;
+}
+
+nav {
+    .uk-breadcrumb {
+        margin: 0;
+    }
+}

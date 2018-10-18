@@ -1,0 +1,68 @@
+.uk-navbar-dropdown {
+  margin-top: 0;
+}
+
+.uk-nav-header {
+  padding: 15px;
+  margin-top: 10px;
+}
+
+nav .uk-breadcrumb {
+  margin: 0;
+}
+
+.admin-wrapper header {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.admin-wrapper .sidebar {
+  width: 220px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #222A30;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.admin-wrapper .sidebar .logo {
+  padding: 0 20px;
+  height: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.admin-wrapper .sidebar .links li > a {
+  padding: 8px 20px;
+  border-left: 2px solid transparent;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.admin-wrapper .sidebar .links li > a:hover {
+  border-left: 3px solid #39f;
+  padding-left: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.admin-wrapper main {
+  margin-top: 80px;
+  padding-top: 30px;
+  -webkit-transition: margin 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: margin 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 960px) {
+  .admin-wrapper header {
+    left: 220px;
+  }
+
+  .admin-wrapper main {
+    margin-left: 220px;
+  }
+}
+

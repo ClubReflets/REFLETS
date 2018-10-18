@@ -1,0 +1,52 @@
+.admin-wrapper {
+    header {
+        top: 0;
+        left:0;
+        right:0;
+    }
+
+    .sidebar {
+        width: $sidebar-width;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        background-color: #222A30;
+        transition: all 0.15s ease-out;
+
+        .logo {
+            padding: 0 20px;
+            height: $navbar-height;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .links {
+            li > a {
+                padding: 8px 20px;
+                border-left: 2px solid transparent;
+                transition: all 0.15s ease-out;
+            }
+
+            li > a:hover {
+                border-left: 3px solid #39f;
+                padding-left: 30px;
+                color: white;
+                background-color: rgba(0,0,0,0.1);
+            }
+        }
+    }
+
+    main {
+        margin-top: $navbar-height;
+        padding-top: 30px;
+        transition: margin 0.2s cubic-bezier(.4,0,.2,1);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .admin-wrapper {
+        header { left: $sidebar-width; }
+        main { margin-left: $sidebar-width; }
+    }
+}

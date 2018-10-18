@@ -8,10 +8,12 @@
         @yield('head')
         <!-- UIkit CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/css/uikit.min.css" />
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
         @yield('body')
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/js/uikit.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.19/js/uikit-icons.min.js"></script>
+        <script href="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
