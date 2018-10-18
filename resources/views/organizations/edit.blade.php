@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@section('breadcrumbs')
+    {{ Breadcrumbs::render('organization.edit', $org) }}
+@endsection
+
 @section('content')
     {!! Form::open(['action' => ['OrganizationController@update', $org->id], 'method' => 'PUT']) !!}
         <legend class="uk-legend">Éditer {{$org->name}}</legend>

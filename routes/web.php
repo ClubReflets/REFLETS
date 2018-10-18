@@ -13,11 +13,15 @@
 
 // Home
 Route::get('/', 'HomeController@index');
-Route::get('/about', 'HomeController@about');
-Route::get('/contact', 'HomeController@contact');
-Route::get('/gallery', 'HomeController@gallery');
+Route::get('apropos', 'HomeController@about');
+Route::get('contact', 'HomeController@contact');
+Route::get('galerie', 'HomeController@gallery');
 
-// Admin
+// Dashboard
+Route::get('admin', function() {
+    return view('dashboard');
+})->name('admin');
+
 Route::resource('admin/organization', 'OrganizationController')->except([
     'create', 'destroy', 'show'
 ]);

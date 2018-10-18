@@ -7,11 +7,7 @@
         <div class="uk-container uk-container-expand uk-background-secondary">
             <nav uk-navbar class="uk-light">
                 <div class="uk-navbar-left">
-                    <ul class="uk-breadcrumb">
-                        <li><a href="">Item</a></li>
-                        <li><a href="">Item</a></li>
-                        <li><span>On it</span></li>
-                    </ul>
+                    @yield('breadcrumbs')
                 </div>
                 <div class="uk-navbar-right">
                     <ul class="uk-navbar-nav">
@@ -52,19 +48,19 @@
     <!-- Sidebar -->
     <aside class="sidebar uk-light uk-visible@m">
         <header class="logo uk-flex uk-flex-middle">
-            <a href="#" class="uk-text-lead">Logo</a>
+            <a href="{{ route('admin') }}" class="uk-text-lead">Logo</a>
         </header>
         <section class="links">
             <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
                 <li class="uk-nav-header">Gestion</li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('admin') }}">
                         <span data-uk-icon="icon: home" class="uk-margin-small-right uk-icon"></span>
                         Accueil
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('organization.index') }}">
                         <span data-uk-icon="icon: social" class="uk-margin-small-right uk-icon"></span>
                         Organisation
                     </a>

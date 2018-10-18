@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 
 @section('breadcrumbs')
-    {{ Breadcrumbs::render('organization.index', $org) }}
+    {{ Breadcrumbs::render('admin') }}
 @endsection
 
 @section('content')
-<h1>Orgs</h1>
+    <p>Dashboard</p>
 @endsection
