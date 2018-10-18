@@ -14,7 +14,8 @@ class FormServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Form::component('uiText', 'components.form.text', ['name', 'label' => '', 'value' => null, 'attributes' => []]);
+        Form::component('uiText', 'components.form.text', ['name', 'label' => null, 'value' => null, 'attributes' => []]);
+        Form::component('uiTextWithIcon', 'components.form.textWithIcon', ['name', 'icon', 'label' => null, 'value' => null, 'attributes' => []]);
         Form::component('uiTextarea', 'components.form.textarea', ['name', 'label' => null, 'value' => null, 'attributes' => []]);
         Form::component('uiSubmit', 'components.form.submit', ['value' => 'Envoyer', 'attributes' => []]);
         Form::component('uiHidden', 'components.form.hidden', ['name', 'value' => null, 'attributes' => []]);

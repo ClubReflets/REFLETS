@@ -51,14 +51,6 @@
             </nav>
         </div>
     </header>
-    <!-- OFFCANVAS -->
-    <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
-        <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
-            <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
-            @include('components.admin.sidebar_links')
-        </div>
-    </div>
-    <!-- /OFFCANVAS -->
     <!-- Sidebar -->
     <aside class="sidebar uk-light uk-visible@m">
         <header class="logo uk-flex uk-flex-middle">
@@ -81,8 +73,22 @@
     <!-- Content -->
     <main>
         <div class="uk-container uk-container-expand">
+            <header class="uk-grid">
+                <div>
+                    <h2>@yield('title')</h2>
+                </div>
+                @yield('content-header')
+            </header>
+            <hr>
             @yield('content')
         </div>
     </main>
+    <!-- OFFCANVAS -->
+    <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
+        <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
+            <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+            @include('components.admin.sidebar_links')
+        </div>
+    </div>
 </div>
 @endsection
